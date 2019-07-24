@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "me.champeau.gradle:jmh-gradle-plugin:0.4.8"
+    }
+}
+
+apply plugin: "me.champeau.gradle.jmh"
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "http://repo.spring.io/release" }
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+dependencies {
+    compile "org.openjdk.jmh:jmh-core:1.21"
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:1.21'
+    compile 'com.google.guava:guava:19.0'
+    compile "io.reactivex:rxjava:1.2.5"
+    compile 'joda-time:joda-time:2.9.2'
+    compile "org.testng:testng:6.9.10"
+}
