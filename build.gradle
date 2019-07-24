@@ -27,4 +27,7 @@ dependencies {
     compile "io.reactivex:rxjava:1.2.5"
     compile 'joda-time:joda-time:2.9.2'
     compile "org.testng:testng:6.9.10"
+    compile group: 'gov.nist.math', name: 'jama', version: '1.0.3'
+    compile group: 'org.ejml', name: 'ejml-all', version: '0.38'
+    compile group: 'org.jblas', name: 'jblas', version: '1.2.4'
 }
